@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Chapeau theme
+Description=Chapeau plymouth theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/chapeau
+ScriptFile=/usr/share/plymouth/themes/chapeau/chapeau.script
