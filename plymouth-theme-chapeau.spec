@@ -7,7 +7,7 @@
 %define grub_mkconfig %{_sbindir}/grub2-mkconfig
 
 Name:           plymouth-theme-%{themename}
-Version:        0.1
+Version:        0.2
 Release:        1%{?dist}
 Summary:        Plymouth Chapeau Theme
 
@@ -18,6 +18,7 @@ Source0:        %{name}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildArch:      noarch
 Requires:       plymouth-scripts
+Requires:       plymouth-plugin-script
 
 %description
 This package contains the Chapeau boot theme for Plymouth.
@@ -74,7 +75,11 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
 
 %changelog
-* Thu Jan 13 2014 Vince Pooley <vince@chapeaulinux.org> - 0.1
+* Mon Jan 13 2014 Vince Pooley <vince@chapeaulinux.org> - 0.2
+- Updated for Chapeau 21
+- Now requires plymouth-plugin-script package
+
+* Mon Jan 13 2014 Vince Pooley <vince@chapeaulinux.org> - 0.1
 - First iteration of the Chapeau default theme, spec amended
 - from Fedora's generic hotdog theme
 
