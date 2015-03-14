@@ -7,7 +7,7 @@
 %define grub_mkconfig %{_sbindir}/grub2-mkconfig
 
 Name:           plymouth-theme-%{themename}
-Version:        0.2
+Version:        0.3
 Release:        1%{?dist}
 Summary:        Plymouth Chapeau Theme
 
@@ -37,9 +37,9 @@ install -m 0644 %{themename}.plymouth *.png *.script $targetdir
 
 %post
 export LIB=%{_lib}
-if [ $1 -eq 1 ]; then
+#if [ $1 -eq 0 ]; then
     %{set_theme} %{themename}
-fi
+#fi
 if [ "$(%{set_theme})" == "%{themename}" ]; then
     %{_libexecdir}/plymouth/plymouth-generate-initrd &>/dev/null
     source /etc/sysconfig/kernel &>/dev/null || :
@@ -75,7 +75,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
 
 %changelog
-* Mon Jan 13 2014 Vince Pooley <vince@chapeaulinux.org> - 0.2
+* Mon Jan 05 2015 Vince Pooley <vince@chapeaulinux.org> - 0.3
+- Bug fix, Now applies the theme
+
+* Sat Jan 03 2015 Vince Pooley <vince@chapeaulinux.org> - 0.2
 - Updated for Chapeau 21
 - Now requires plymouth-plugin-script package
 
