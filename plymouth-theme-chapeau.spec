@@ -2,7 +2,7 @@
 %define set_theme %{_sbindir}/plymouth-set-default-theme
 
 Name:           plymouth-theme-%{themename}
-Version:        0.4
+Version:        0.5
 Release:        1%{?dist}
 Summary:        Plymouth Chapeau Theme
 
@@ -62,8 +62,12 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
 
 %changelog
+* Mon Jan 12 2015 Vince Pooley <vince@chapeaulinux.org> - 0.5
+- Fix post scriplet error and changed background.png
+
 * Mon Jan 05 2015 Vince Pooley <vince@chapeaulinux.org> - 0.4
-- Fix post scriplet error
+- Changed %post and %postun scriptlets to methods
+- used by Fedora 21's plymouth spec
 
 * Sat Jan 03 2015 Vince Pooley <vince@chapeaulinux.org> - 0.2
 - Updated for Chapeau 21
