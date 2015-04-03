@@ -62,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
 
 %changelog
-* Mon Jan 12 2015 Vince Pooley <vince@chapeaulinux.org> - 0.6
+* Wed Apr 01 2015 Vince Pooley <vince@chapeaulinux.org> - 0.6
 - Updated for Chapeau 22
 
 * Mon Jan 12 2015 Vince Pooley <vince@chapeaulinux.org> - 0.5
