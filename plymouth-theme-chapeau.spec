@@ -3,7 +3,7 @@
 
 Name:           plymouth-theme-%{themename}
 Version:        0.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Plymouth Chapeau Theme
 
 Group:          System Environment/Base
@@ -62,6 +62,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
 
 %changelog
+* Sat Apr 18 2015 Vince Pooley <vince@chapeaulinux.org> - 0.6
+- Background made darker
+
 * Wed Apr 01 2015 Vince Pooley <vince@chapeaulinux.org> - 0.6
 - Updated for Chapeau 22
 
