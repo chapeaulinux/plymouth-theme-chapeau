@@ -2,8 +2,8 @@
 %define set_theme %{_sbindir}/plymouth-set-default-theme
 
 Name:           plymouth-theme-%{themename}
-Version:        0.6
-Release:        2%{?dist}
+Version:        0.7
+Release:        3%{?dist}
 Summary:        Plymouth Chapeau Theme
 
 Group:          System Environment/Base
@@ -21,7 +21,7 @@ Provides:	plymouth(system-theme) = %{version}-%{release}
 This package contains the Chapeau boot theme for Plymouth.
 
 %prep
-%setup -q
+%setup -c
 
 %build
 
@@ -62,6 +62,10 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/plymouth/themes/%{themename}/%{themename}.plymouth
 
 %changelog
+* Tue Nov 03 2015 Vince Pooley <vince@chapeaulinux.org> - 0.7
+- New backgrounds for Chapeau 23
+- Changed %setup macro's option to 'c' in spec
+
 * Sat Apr 18 2015 Vince Pooley <vince@chapeaulinux.org> - 0.6
 - Background made darker
 
